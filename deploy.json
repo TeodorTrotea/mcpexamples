@@ -5,7 +5,7 @@
     "description": "Collection of example MCP servers for cockpit deployment",
     "repository": {
       "type": "git",
-      "url": "https://github.com/example/example-mcp-servers"
+      "url": "https://github.com/TeodorTrotea/mcpexamples"
     },
     "servers": [
       {
