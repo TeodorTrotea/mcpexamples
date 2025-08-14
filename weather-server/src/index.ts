@@ -52,7 +52,7 @@ class WeatherServer {
               },
               required: ['location'],
             },
-          } as ToolSchema,
+          },
         ],
       };
     });

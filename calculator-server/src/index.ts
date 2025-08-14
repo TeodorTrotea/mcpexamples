@@ -102,7 +102,7 @@ class CalculatorServer {
               required: ['number'],
             },
           },
-        ] as ToolSchema[],
+        ],
       };
     });
 

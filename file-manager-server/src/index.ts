@@ -85,7 +85,7 @@ class FileManagerServer {
               required: ['path'],
             },
           },
-        ] as ToolSchema[],
+        ],
       };
     });
 
