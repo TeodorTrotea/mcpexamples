@@ -1,0 +1,23 @@
+{
+  "name": "weather-server",
+  "description": "Weather information MCP server",
+  "version": "1.0.0",
+  "command": "npx",
+  "args": ["weather-mcp-server"],
+  "env": {},
+  "capabilities": ["tools"],
+  "tools": [
+    {
+      "name": "get_weather",
+      "description": "Get current weather information for a location"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/example-mcp-servers"
+  },
+  "deployment": {
+    "auto_install": true,
+    "requirements": ["node", "npm"]
+  }
+}

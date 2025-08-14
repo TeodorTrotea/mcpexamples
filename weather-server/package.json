@@ -1,0 +1,28 @@
+{
+  "name": "weather-mcp-server",
+  "version": "1.0.0",
+  "description": "Weather MCP server for getting weather information",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "prepare": "npm run build"
+  },
+  "keywords": ["mcp", "server", "weather", "tools"],
+  "author": "Example Author",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "node-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "bin": {
+    "weather-mcp-server": "./dist/index.js"
+  }
+}

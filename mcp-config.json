@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "weather-server": {
+      "command": "npx",
+      "args": ["weather-mcp-server"],
+      "env": {}
+    },
+    "file-manager-server": {
+      "command": "npx", 
+      "args": ["file-manager-mcp-server"],
+      "env": {}
+    },
+    "calculator-server": {
+      "command": "npx",
+      "args": ["calculator-mcp-server"],
+      "env": {}
+    }
+  }
+}

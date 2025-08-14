@@ -1,0 +1,43 @@
+{
+  "name": "calculator-server",
+  "description": "Calculator MCP server for mathematical operations",
+  "version": "1.0.0",
+  "command": "npx",
+  "args": ["calculator-mcp-server"],
+  "env": {},
+  "capabilities": ["tools"],
+  "tools": [
+    {
+      "name": "add",
+      "description": "Add two numbers"
+    },
+    {
+      "name": "subtract",
+      "description": "Subtract two numbers"
+    },
+    {
+      "name": "multiply",
+      "description": "Multiply two numbers"
+    },
+    {
+      "name": "divide",
+      "description": "Divide two numbers"
+    },
+    {
+      "name": "power",
+      "description": "Raise a number to a power"
+    },
+    {
+      "name": "sqrt",
+      "description": "Calculate square root of a number"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/example-mcp-servers"
+  },
+  "deployment": {
+    "auto_install": true,
+    "requirements": ["node", "npm"]
+  }
+}

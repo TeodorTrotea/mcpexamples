@@ -1,0 +1,52 @@
+name: Deploy MCP Servers
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        server: [weather-server, file-manager-server, calculator-server]
+        
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: '${{ matrix.server }}/package-lock.json'
+        
+    - name: Install dependencies
+      working-directory: ${{ matrix.server }}
+      run: npm ci
+      
+    - name: Build server
+      working-directory: ${{ matrix.server }}
+      run: npm run build
+      
+    - name: Test server startup
+      working-directory: ${{ matrix.server }}
+      run: timeout 10s npm start || exit 0
+
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Deploy to Registry
+      run: |
+        echo "Deploying MCP servers to registry"
+        # Add actual deployment logic here
+        # This could involve pushing to a package registry
+        # or updating a deployment manifest

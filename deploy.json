@@ -1,0 +1,42 @@
+{
+  "deployment": {
+    "name": "example-mcp-servers",
+    "version": "1.0.0",
+    "description": "Collection of example MCP servers for cockpit deployment",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/example/example-mcp-servers"
+    },
+    "servers": [
+      {
+        "name": "weather-server",
+        "path": "./weather-server",
+        "config": "./weather-server/config.json"
+      },
+      {
+        "name": "file-manager-server",
+        "path": "./file-manager-server",
+        "config": "./file-manager-server/config.json"
+      },
+      {
+        "name": "calculator-server",
+        "path": "./calculator-server",
+        "config": "./calculator-server/config.json"
+      }
+    ],
+    "requirements": {
+      "node": ">=18.0.0",
+      "npm": ">=8.0.0"
+    },
+    "installation": {
+      "auto_install": true,
+      "build_command": "npm run build",
+      "install_command": "npm install"
+    },
+    "cockpit": {
+      "compatible": true,
+      "version": ">=1.0.0",
+      "auto_register": true
+    }
+  }
+}

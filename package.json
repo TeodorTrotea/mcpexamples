@@ -1,0 +1,33 @@
+{
+  "name": "example-mcp-servers",
+  "version": "1.0.0",
+  "description": "Collection of example MCP servers for cockpit deployment",
+  "private": true,
+  "scripts": {
+    "build:all": "npm run build --workspaces",
+    "install:all": "npm install --workspaces",
+    "start:weather": "npm start --workspace=weather-server",
+    "start:file-manager": "npm start --workspace=file-manager-server", 
+    "start:calculator": "npm start --workspace=calculator-server",
+    "dev:all": "concurrently \"npm run dev --workspace=weather-server\" \"npm run dev --workspace=file-manager-server\" \"npm run dev --workspace=calculator-server\""
+  },
+  "workspaces": [
+    "weather-server",
+    "file-manager-server", 
+    "calculator-server"
+  ],
+  "keywords": ["mcp", "servers", "cockpit", "tools", "example"],
+  "author": "Example Author",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/example/example-mcp-servers"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}

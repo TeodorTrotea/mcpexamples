@@ -1,0 +1,35 @@
+{
+  "name": "file-manager-server",
+  "description": "File management MCP server with basic file operations",
+  "version": "1.0.0",
+  "command": "npx",
+  "args": ["file-manager-mcp-server"],
+  "env": {},
+  "capabilities": ["tools"],
+  "tools": [
+    {
+      "name": "list_directory",
+      "description": "List contents of a directory"
+    },
+    {
+      "name": "read_file",
+      "description": "Read contents of a file"
+    },
+    {
+      "name": "create_directory",
+      "description": "Create a new directory"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/example-mcp-servers"
+  },
+  "deployment": {
+    "auto_install": true,
+    "requirements": ["node", "npm"],
+    "security": {
+      "sandbox": true,
+      "allowed_paths": ["./"]
+    }
+  }
+}
