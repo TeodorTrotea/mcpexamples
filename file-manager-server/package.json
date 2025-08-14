@@ -16,11 +16,11 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
     "fs-extra": "^11.0.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0",
+    "@types/fs-extra": "^11.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "@types/fs-extra": "^11.0.0",
     "tsx": "^4.0.0"
   },
   "bin": {
